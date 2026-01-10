@@ -3,7 +3,7 @@
 __version__ = "0.1.0"
 
 from .game import Game
-from .components import Component, Source, Exit, Mirror, Wire, Switch, Blocker
+from .components import Component, Source, Exit, Mirror, Wire, Switch, Blocker, Splitter
 from .grid import Grid
 from .signal import Signal, Direction
 
@@ -16,6 +16,7 @@ __all__ = [
     "Wire",
     "Switch",
     "Blocker",
+    "Splitter",
     "Grid",
     "Signal",
     "Direction",
