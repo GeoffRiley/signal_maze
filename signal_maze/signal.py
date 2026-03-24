@@ -44,32 +44,32 @@ class Direction(Enum):
 
 class Signal:
     """Represents a signal moving through the grid."""
-    
+
     def __init__(self, x: int, y: int, direction: Direction):
-        """Initialize a signal at position (x, y) moving in direction."""
+        """Initialize a signal at a position (x, y) moving in direction."""
         self.x = x
         self.y = y
         self.direction = direction
-    
+
     def move(self) -> Tuple[int, int]:
-        """Move signal in its current direction and return new position."""
+        """Move the signal in its current direction and return a new position."""
         dx, dy = self.direction.value
         self.x += dx
         self.y += dy
-        return (self.x, self.y)
-    
+        return self.x, self.y
+
     def peek_next(self) -> Tuple[int, int]:
-        """Get next position without moving."""
+        """Get the next position without moving."""
         dx, dy = self.direction.value
-        return (self.x + dx, self.y + dy)
-    
+        return self.x + dx, self.y + dy
+
     def copy(self) -> 'Signal':
         """Create a copy of this signal."""
         return Signal(self.x, self.y, self.direction)
-    
+
     def __repr__(self) -> str:
         return f"Signal({self.x}, {self.y}, {self.direction.name})"
-    
+
     def __eq__(self, other) -> bool:
         if not isinstance(other, Signal):
             return False

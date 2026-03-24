@@ -6,6 +6,10 @@ A turn-based puzzle game played on a grid of interconnected components. Guide si
 
 Signal Maze is a puzzle game where you must guide one or more signals from their sources to specific exits by changing the environment. You can rotate mirrors, toggle switches, and strategically plan your moves. Signals obey strict logical rules, reflecting, splitting, or terminating depending on what they encounter. Each move recalculates the entire signal flow, creating a dynamic puzzle where small changes ripple through the system.
 
+## Motivation
+
+Signal Maze was created as a personal project to explore the logic of signal propagation and game design.
+
 ## Features
 
 - **Turn-based gameplay**: Plan your moves carefully
@@ -32,6 +36,11 @@ cd signal_maze
 pip install -e .
 ```
 
+## Quick Start
+
+1. **Create a new game** by running `python main.py`
+2. **Choose a level** by selecting a number (1-4) or `q` to quit
+
 ## Usage
 
 ### Play the game
@@ -55,7 +64,7 @@ signal-maze
 
 ```
 ┌────────────┐
-│·^·····X···│
+│·^·····X····│
 │············│
 │·····\······│
 │············│
